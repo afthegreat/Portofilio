@@ -1,15 +1,14 @@
 .about-container {
-    display: flex;
+    display: block;
     min-height: 100vh; /* Ensure full viewport height */
     font-family: sans-serif; /* Example font */
-    padding: 40px; /* Add some padding */
   }
   
   .about-content {
     background-color: white;
     padding: 100px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
   
   .about-header {
@@ -17,7 +16,7 @@
   }
   
   .about-me-button {
-    background-color: #7B61FF; /* Example button color */
+    background-color: #7B61FF; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -25,8 +24,8 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    display: inline-flex; /* Use flexbox for icon and text */
-    align-items: center; /* Vertically center icon and text */
+    display: inline-flex;
+    align-items: center; 
   }
   
   .plus-icon {
