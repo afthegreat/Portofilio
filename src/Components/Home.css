@@ -1,0 +1,102 @@
+/* Home.css */
+.container {
+    display: flex;
+    min-height: 100vh; /* Use min-height for flexibility */
+    flex-direction: row; /* Default to row for larger screens */
+  }
+  
+  .left-section {
+    width: 50%;
+    background-color: #f8f9fa; /* Example background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Adjust padding as needed */
+  }
+  
+  .text-content {
+    max-width: 400px; /* Adjust max-width for readability */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .left-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .left-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #6c757d; /* Example color */
+  }
+  
+  .left-section p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .buttons button {
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem; /* Space between buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons button:first-child { /* Style the first button differently if needed */
+      background-color: #007bff; /* Example primary color */
+      color: white;
+  }
+  .buttons button:first-child:hover{
+      background-color: #0056b3;
+  }
+  .buttons button:nth-child(2) {
+      background-color: #6c757d; /* Example secondary color */
+      color: white;
+  }
+  .buttons button:nth-child(2):hover{
+      background-color: #080a0c;
+  }
+  
+  
+  .right-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent image overflow */
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove potential image spacing */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
+    .left-section, .right-section {
+      width: 100%;
+    }
+      .text-content {
+          text-align: center; /* Center text on smaller screens */
+      }
+      .buttons {
+          flex-direction: column; /* Stack buttons vertically */
+          align-items: center; /* Center buttons horizontally */
+      }
+      .buttons button {
+          margin: 0.5rem 0; /* Add margin top and bottom */
+          width: 100%; /* Make buttons take full width */
+      }
+
+  }

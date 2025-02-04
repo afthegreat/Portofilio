@@ -1,0 +1,48 @@
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center;
+  padding: 1rem 2rem; /* Increased left padding for spacing */
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-left: 6rem; /* Space from the left */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* Increased space between buttons */
+  margin-right: 10rem; /* Space from the right side */
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgb(235, 18, 18);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #e5e7eb9d;
+  transform: scale(1.05);
+}
+
+.nav-button:active {
+  background-color: #8edd5a;
+}
