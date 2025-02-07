@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import myPhoto from "./Assets/abel.jpg"; // Replace with your photo
+import myPhoto from "./Assets/abel.JPG"; // Replace with your photo
 
 const Home = () => {
   return (

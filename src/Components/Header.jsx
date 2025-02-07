@@ -16,8 +16,9 @@ export default function Header() {
   About
 </button>
         <button className="nav-button" onClick={()=> document.getElementById('Projects').scrollIntoView({ behavior: 'smooth'})}>Projects</button>
-        <button className="nav-button" onClick={()=> document.getElementById('Contact').scrollIntoView({ behavior: 'smooth'})}>Contact Me</button>
-      </nav>
+        <button className="nav-button" onClick={()=> document.getElementById('Services').scrollIntoView({ behavior: 'smooth'})}>Services</button>
+        <button className="nav-button" onClick={()=> document.getElementById('Contact').scrollIntoView({ behavior: 'smooth'})}>Contact me</button>
+        </nav>
      
     </header>
   );

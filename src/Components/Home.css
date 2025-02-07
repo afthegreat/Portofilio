@@ -1,17 +1,17 @@
 /* Home.css */
 .container {
     display: flex;
-    min-height: 100vh; /* Use min-height for flexibility */
+    min-height: 70vh; /* Use min-height for flexibility */
     flex-direction: row; /* Default to row for larger screens */
   }
   
   .left-section {
     width: 50%;
-    background-color: #f8f9fa; /* Example background color */
+    background-color: #f8f9fa; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Adjust padding as needed */
+    padding: 2rem; 
   }
   
   .text-content {
@@ -41,7 +41,7 @@
   
   .buttons button {
     padding: 0.8rem 1.5rem;
-    margin-right: 1rem; /* Space between buttons */
+    margin-right: 5rem; /* Space between buttons */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -76,7 +76,6 @@
   .image {
     max-width: 100%;
     height: auto;
-    display: block; /* Remove potential image spacing */
   }
   
   /* Responsive Design */
