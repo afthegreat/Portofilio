@@ -17,7 +17,7 @@ const projects = [
     title: "Online Election System",
     description: "Building a secure and fast election system.",
     details:
-      "Description: A web-based system designed to transform the manual student union election process into a digital platform.<br><br>Technologies Used: React, Spring Boot, PostgreSQL, JavaScript, Java<br><br>Role: Requirement analysist, front end and backend developer.<br><br>Key Features:<ul><li>Secure online voting system</li><li>Role-based access for students, candidates, and administrators</li><li>Real-time vote counting and results display</li></ul>",
+    "Description: A web based system that allows students to coose thier student unions in easy and secured way.<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Technologies Used</title><style>body {font-family: Arial, sans-serif;} .technologies {margin-top: 20px;} .technologies h2 {text-decoration: underline;} .tech-category {margin-bottom: 15px;} .tech-category span {font-weight: bold;} ul {list-style-type: none; padding: 0;}</style></head><body><div class='technologies'><h2>Technologies Used</h2><div class='tech-category'><span>Front-end:</span><ul><li>Language: JavaScript</li><li>Library: React</li></ul></div><div class='tech-category'><span>Backend:</span><ul><li>Language: Java</li><li>Framework: Springboot</li></ul></div><div class='tech-category'><span>Database:</span><ul><li>Postgres</li></ul></div></div></body></html>features:<ul><li>Secure online voting system</li><li>Role-based access for students, candidates, and administrators</li><li>Automated vote counting and results display</li></ul>",
     githubLink: "https://github.com/afthegreat/online-election",
     additionalText: "Details",
     image: "election-image.jpg", // Add image path for this project
@@ -26,7 +26,7 @@ const projects = [
     title: "Assignment Submission App",
     description: "Developing a flexible learning mechanism.",
     details:
-      "An online platform that allows students to submit assignments, receive feedback, and track deadlines. Features include automated plagiarism detection, deadline reminders, and grade tracking.",
+      "An online platform that allows students to submit assignments, receive feedback, and track deadlines. Features include automated plagiarism detection, deadline reminders, and grade tracking.<h3>it is ongoing project",
     githubLink: "https://github.com/afthegreat/assignment_submission",
     additionalText: "Details",
     image: "assignment-image.jpg", // Add image path for this project
