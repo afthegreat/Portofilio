@@ -42,7 +42,50 @@
   background-color: #e5e7eb9d;
   transform: scale(1.05);
 }
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 2rem;
+  }
 
-.nav-button:active {
-  background-color: #8edd5a;
+  .about-header {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-me-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .about-intro h1 {
+    font-size: 2rem;
+  }
+
+  .about-intro p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .about-details {
+    grid-template-columns: 1fr; /* Stack sections vertically */
+    gap: 1.5rem;
+  }
+
+  .detail-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .detail-section p {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem; /* Resize icons for mobile */
+  }
 }

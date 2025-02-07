@@ -79,23 +79,88 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column; /* Stack vertically on smaller screens */
-    }
-    .left-section, .right-section {
-      width: 100%;
-    }
-      .text-content {
-          text-align: center; /* Center text on smaller screens */
-      }
-      .buttons {
-          flex-direction: column; /* Stack buttons vertically */
-          align-items: center; /* Center buttons horizontally */
-      }
-      .buttons button {
-          margin: 0.5rem 0; /* Add margin top and bottom */
-          width: 100%; /* Make buttons take full width */
-      }
+  /* Mobile-responsive styles for smaller screens */
 
+/* Mobile Layout */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+    min-height: auto; /* Allow content height to adjust */
   }
+
+  .left-section {
+    width: 100%; /* Full width on mobile */
+    padding: 1rem; /* Adjust padding */
+    text-align: center; /* Center text */
+  }
+
+  .text-content {
+    max-width: 90%; /* Allow more space on smaller screens */
+    margin: 0 auto; /* Center align text content */
+  }
+
+  .left-section h1 {
+    font-size: 2rem; /* Adjust font size */
+    margin-bottom: 0.8rem; /* Adjust margin */
+  }
+
+  .left-section h2 {
+    font-size: 1.3rem; /* Adjust font size */
+    margin-bottom: 1rem;
+  }
+
+  .left-section p {
+    margin-bottom: 1.5rem; /* Adjust margin */
+    line-height: 1.5; /* Adjust line height */
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  .buttons button {
+    margin: 0.5rem 0; /* Adjust margin for stacked buttons */
+    padding: 1rem 2rem; /* Adjust button padding */
+    width: 80%; /* Button width adjustment */
+  }
+
+  .right-section {
+    width: 100%; /* Full width for mobile */
+    padding-top: 2rem; /* Adjust top padding */
+  }
+
+  .image {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+}
+
+/* Very Small Screens (Portrait Mobile Devices) */
+@media screen and (max-width: 480px) {
+  .left-section h1 {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .left-section h2 {
+    font-size: 1.1rem; /* Further reduce font size */
+  }
+
+  .left-section p {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .buttons button {
+    padding: 0.8rem 1.5rem; /* Adjust padding */
+    font-size: 0.9rem; /* Reduce button font size */
+  }
+
+  .buttons button:first-child {
+    margin-right: 0; /* Remove margin for single button on small screens */
+  }
+
+  .right-section {
+    padding-top: 1rem; /* Reduce top padding */
+  }
+}

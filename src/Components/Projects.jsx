@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Projects.css";
-import A from "./Assets/abel.JPG";
+import onlin from"./Assets/online.png";
+import broke from"./Assets/broker.png";
 
 const projects = [
   {
@@ -11,7 +12,7 @@ const projects = [
       "Description: A web-based system for connecting sellers with buyers efficiently.<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Technologies Used</title><style>body {font-family: Arial, sans-serif;} .technologies {margin-top: 20px;} .technologies h2 {text-decoration: underline;} .tech-category {margin-bottom: 15px;} .tech-category span {font-weight: bold;} ul {list-style-type: none; padding: 0;}</style></head><body><div class='technologies'><h2>Technologies Used</h2><div class='tech-category'><span>Front-end:</span><ul><li>Language: JavaScript</li><li>Library: React</li></ul></div><div class='tech-category'><span>Backend:</span><ul><li>Language: JavaScript</li><li>Runtime Environment: Node.js</li></ul></div><div class='tech-category'><span>Database:</span><ul><li>MySQL</li></ul></div></div></body></html>features:<ul><li>Automated seller-buyer matching</li><li>Secure authentication and role-based access</li><li>Responsive UI for seamless user experience</li></ul>",
     githubLink: "https://github.com/afthegreat/Broker",
     additionalText: "Details",
-    image: A, // Add image path for this project
+    image: broke, 
   },
   {
     title: "Online Election System",
@@ -20,16 +21,7 @@ const projects = [
     "Description: A web based system that allows students to coose thier student unions in easy and secured way.<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Technologies Used</title><style>body {font-family: Arial, sans-serif;} .technologies {margin-top: 20px;} .technologies h2 {text-decoration: underline;} .tech-category {margin-bottom: 15px;} .tech-category span {font-weight: bold;} ul {list-style-type: none; padding: 0;}</style></head><body><div class='technologies'><h2>Technologies Used</h2><div class='tech-category'><span>Front-end:</span><ul><li>Language: JavaScript</li><li>Library: React</li></ul></div><div class='tech-category'><span>Backend:</span><ul><li>Language: Java</li><li>Framework: Springboot</li></ul></div><div class='tech-category'><span>Database:</span><ul><li>Postgres</li></ul></div></div></body></html>features:<ul><li>Secure online voting system</li><li>Role-based access for students, candidates, and administrators</li><li>Automated vote counting and results display</li></ul>",
     githubLink: "https://github.com/afthegreat/online-election",
     additionalText: "Details",
-    image: "election-image.jpg", // Add image path for this project
-  },
-  {
-    title: "Assignment Submission App",
-    description: "Developing a flexible learning mechanism.",
-    details:
-      "An online platform that allows students to submit assignments, receive feedback, and track deadlines. Features include automated plagiarism detection, deadline reminders, and grade tracking.<h3>it is ongoing project",
-    githubLink: "https://github.com/afthegreat/assignment_submission",
-    additionalText: "Details",
-    image: "assignment-image.jpg", // Add image path for this project
+    image: onlin, // Add image path for this project
   },
 ];
 
@@ -40,7 +32,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.8, ease: "easeOut", delay: 0.8 + index * 1 },
-  }),
+  }),// Add image path for this proje
 };
 
 const imageVariants = {

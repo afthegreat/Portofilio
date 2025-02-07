@@ -149,31 +149,22 @@
 
 .project-image-box {
     width: 100%; /* Ensures it matches the card width */
-    max-width: 300px; /* Match the width of the cards */
-    height: 300px; /* Fixed height for consistency */
+    max-width: 470px; /* Match the width of the cards */
+    height: 500px; /* Fixed height for consistency */
     display: flex;
     justify-content: center; /* Centers the images inside */
     border: 2px solid #ccc; /* Same border as the cards */
     border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;}
+}
 
 /* Ensures the image fills the box */
 .project-image {
-    width: 100%;
-    height: 100%;
+    width: 470px;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+   
 }
-
-    .project-image-box:hover .project-image {
-        transform: scale(1.5)
-        
-    }
-    .project-image-box:hover {
-            transform: scale(1.5);
-        }
 .project-image-box:first-child {
     margin-left: 160px;
 }
@@ -183,65 +174,146 @@
 /* Media Queries for Responsiveness */
 
 /* For devices smaller than 600px (mobile phones) */
-@media screen and (max-width: 600px) {
-    .projects-title {
-        font-size: 2rem;
-    }
+/* Responsive Design for Projects Section */
 
-    .projects-description {
-        font-size: 1rem;
-    }
-
+/* For tablets and small screens */
+@media (max-width: 1024px) {
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-
-    .project-card {
-        padding: 20px;
-    }
-
-    .project-icon {
-        font-size: 2.5rem;
-    }
-
-    .project-title {
-        font-size: 1.2rem;
-    }
-
-    /* Adjust image boxes on mobile */
+  
     .projects-images {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .project-image-box {
-        width: 90%; /* Adjust for smaller screens */
-        margin-bottom: 20px;
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
     }
-}
-
-/* For devices between 601px and 900px (tablets) */
-@media screen and (max-width: 900px) {
-    .projects-title {
-        font-size: 2.2rem;
+  
+    .project-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
-
-    .projects-description {
-        font-size: 1.1rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-    }
-
+  
     .project-card {
-        padding: 30px;
+      padding: 30px;
+      height: auto; /* Adjusts card height */
     }
-
-    /* Adjust image boxes on tablets */
+  
+    .project-buttons {
+      flex-direction: column;
+    }
+  
+    .project-button {
+      margin-bottom: 10px;
+      width: 100%; /* Makes buttons full width */
+    }
+  
+    .popup-content {
+      width: 90%;
+      max-width: 500px;
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 768px) {
+    .projects-container {
+      padding: 20px;
+    }
+  
+    .projects-title {
+      font-size: 2rem;
+    }
+  
+    .projects-description {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .project-card {
+      padding: 20px;
+      height: auto;
+    }
+  
     .project-image-box {
-        width: 200px; /* Adjust width for tablets */
+      max-width: 100%;
+      height: auto;
+      margin: 0;
     }
-}
+  
+    .project-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .project-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .project-button {
+      width: 100%;
+    }
+  
+    .popup-content {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .close-btn {
+      top: 5px;
+      right: 10px;
+      font-size: 18px;
+    }
+  }
+  
+  /* For very small screens (e.g., phones in portrait mode) */
+  @media (max-width: 480px) {
+    .projects-title {
+      font-size: 1.8rem;
+    }
+  
+    .projects-description {
+      font-size: 0.9rem;
+    }
+  
+    .project-title {
+      font-size: 1.2rem;
+    }
+  
+    .project-text {
+      font-size: 0.9rem;
+    }
+  
+    .popup-content {
+      width: 95%;
+      max-width: 350px;
+    }
+  
+    .project-image {
+      width: 100%;
+      height: 300px;
+    }
+  
+    .project-buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .project-button {
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+  

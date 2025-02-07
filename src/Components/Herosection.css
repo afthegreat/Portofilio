@@ -99,3 +99,104 @@
 .contact-details i {
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column; /* Stack content and image vertically */
+      padding: 40px 20px; /* Adjust padding for smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+    }
+  
+    .hero-container {
+      flex-direction: column;
+      height: auto; /* Adjust height for vertical layout */
+      padding: 20px;
+    }
+  
+    .hero-content {
+      text-align: center;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem; /* Smaller font size for smaller screens */
+      margin-bottom: 10px;
+    }
+  
+    .hero p {
+      font-size: 1rem; /* Adjust paragraph font size */
+      margin-bottom: 20px;
+    }
+  
+    .cta-button {
+      padding: 12px 25px; /* Smaller padding for mobile screens */
+      font-size: 1rem; /* Adjust button font size */
+    }
+  
+    .hero-image {
+      width: 80%; /* Make the image take more space on smaller screens */
+      max-width: 300px; /* Limit the max width of the image */
+      margin-left: 0;
+      margin-top: 20px; /* Add space between content and image */
+    }
+  
+    .curved-section {
+      padding: 30px;
+      height: auto; /* Adjust height to fit content */
+      border-radius: 0%; /* Remove curved corners for mobile view */
+      background-color: #663399;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-details {
+      font-size: 1rem; /* Adjust font size for mobile */
+      margin: 5px 0; /* Adjust margin */
+    }
+  
+    .contact-details a {
+      font-size: 1.1rem; /* Smaller font size for mobile */
+    }
+  
+    .contact-details i {
+      font-size: 1.3rem; /* Adjust icon size */
+    }
+  }
+  
+  /* Very Small Screens (Portrait Mobile Devices) */
+  @media screen and (max-width: 480px) {
+    .hero h1 {
+      font-size: 1.8rem; /* Further reduce font size */
+    }
+  
+    .hero p {
+      font-size: 0.9rem; /* Further adjust paragraph font size */
+    }
+  
+    .cta-button {
+      padding: 10px 20px; /* Further reduce button size */
+      font-size: 0.9rem; /* Adjust button text size */
+    }
+  
+    .hero-image {
+      width: 90%; /* Make the image even smaller */
+      max-width: 250px; /* Further limit the image width */
+    }
+  
+    .contact-details {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+  
+    .contact-details a {
+      font-size: 1rem; /* Adjust the size of links */
+    }
+  
+    .contact-details i {
+      font-size: 1.2rem; /* Adjust icon size for small screens */
+    }
+  }
+  

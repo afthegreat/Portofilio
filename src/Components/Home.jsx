@@ -10,12 +10,14 @@ const Home = () => {
           <h1>Hi, I'm Abel Ferade</h1> {/* Your name */}
           <h2>Full stack Web Developer</h2> {/* Your title */}
           <p>
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. {/* Your intro text */}
+          Mastering both front and back end, crafting seamless digital experiences that stand the test of time. {/* Your intro text */}
           </p>
           <div className="buttons"> {/* Wrapper for buttons */}
-            <button>Hire Me</button>
-            <button>Download CV</button>
+           <a href="mailto:abelferede916@gmail.com"><button>Hire Me</button></a> 
+           <a href={"/lastcv.pdf"} download="lastcv.pdf">
+  <button>Download CV</button>
+</a>
+
           </div>
         </div>
       </div>

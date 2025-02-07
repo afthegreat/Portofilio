@@ -1,10 +1,8 @@
 import React from 'react';
 import './About.css';
-import { motion } from 'framer-motion'; // Import motion from Framer Motion
-import fb from "./Assets/Socialmedias/facebook.png";
-import tg from "./Assets/Socialmedias/telegram.png";
-import li from "./Assets/Socialmedias/linkedin.png";
-import em from "./Assets/Socialmedias/email.png";
+import { motion } from 'framer-motion';
+import { FaFacebook, FaTelegramPlane, FaLinkedinIn, FaEnvelope } from "react-icons/fa"; // Import motion from Framer Motion
+
 
 const About = () => {
 
@@ -108,11 +106,19 @@ const About = () => {
           >
             <h3>Social Media</h3>
             <div className="social-icons">
-              <a href="www.facebook.com"><img src={fb} alt="Facebook" /></a>
-              <a href="https://t.me/@neverdoit1532"><img src={tg} alt="Telegram" /></a>
-              <a href="https://www.linkedin.com/in/abel-ferede-08883a344/"><img src={li} alt="LinkedIn" /></a>
-              <a href="https://www.emial.com/abelferede916@gmail.com"><img src={em} alt="email" /></a>
-            </div>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <FaFacebook size={30} />
+      </a>
+      <a href="https://t.me/@neverdoit1532" target="_blank" rel="noopener noreferrer">
+        <FaTelegramPlane size={30} />
+      </a>
+      <a href="https://www.linkedin.com/in/abel-ferede-08883a344/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedinIn size={30} />
+      </a>
+      <a href="mailto:abelferede916@gmail.com" target="_blank" rel="noopener noreferrer">
+        <FaEnvelope size={30} />
+      </a>
+    </div>
           </motion.div>
         </div>
       </div>

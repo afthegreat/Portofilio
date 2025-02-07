@@ -1,16 +1,16 @@
 import React from 'react';
 import './Herosection.css';
 import f from './Assets/footer.png';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // 📌 Import icons
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; 
 
 const Herosection = () => {
   return (
-    <section className="hero">
+    <section id="Contact" className="hero">
       <div className="hero-container">
         <div className="hero-content">
           <h1>Have a project in mind?</h1>
           <p>Let's get to work.</p>
-          <button className="cta-button">Say Hello</button>
+          <button onClick={()=> window.location.href="sms:+251989076450?body=hi there!"} className="cta-button">Say Hello</button>
         </div>
 
         <div className="hero-image">
@@ -32,7 +32,10 @@ const Herosection = () => {
             </a>
           </div>
           <div className="contact-details">
-            <FaMapMarkerAlt /> Addis Abab, lafto
+            <FaMapMarkerAlt /> Addis Abab, lafto 
+          </div>
+          <div className='footer'>
+            <p>@all rights reserved 2025</p>
           </div>
         </div>
       </div>
