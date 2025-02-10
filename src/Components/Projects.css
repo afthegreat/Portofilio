@@ -1,319 +1,273 @@
 /* Project Container */
 .projects-container {
-    background-color: #0c0f1b;
-    color: white;
-    text-align: center;
-    padding: 20px 20px;
+  background-color: #0c0f1b;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
 }
 
 /* Title and Description */
 .projects-title {
-    font-size: 2.5rem;
-    font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .projects-description {
-    max-width: 600px;
-    margin: 10px auto;
-    color: #a0a0a0;
+  max-width: 600px;
+  margin: 10px auto;
+  color: #a0a0a0;
 }
 
-/* Grid Layout */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 30px auto;
+/* Pairs the images and cards together */
+.projects-pair-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Each Project Pair (Image + Card) */
+.project-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Spacing between image and card */
+}
+
+/* Image Box */
+.project-image-box {
+  width: 450px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  position: relative; /* For positioning the tooltip */
+}
+
+/* Image Styling */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer; /* Pointer cursor on hover to show interactivity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  filter: brightness(1.2); /* Slight brightness increase */
+}
+
+/* Tooltip Styling */
+.image-tooltip {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  visibility: hidden;
+}
+
+.project-image:hover + .image-tooltip {
+  visibility: visible;
 }
 
 /* Project Card */
 .project-card {
-    background-color: #121726;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(50px);
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 200px; /* Ensures all cards have the same height */
-}
-
-/* Card Animation */
-@keyframes fadeUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Project Icon */
-.project-icon {
-    font-size: 3rem;
+  background-color: #121726;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  width: 400px;
 }
 
 /* Project Title */
 .project-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /* Project Description */
 .project-text {
-    color: #a0a0a0;
-    margin-top: 5px;
+  color: #a0a0a0;
+  margin-top: 5px;
+  text-align: center;
 }
 
 /* Project Buttons */
 .project-buttons {
-    margin-top: 30px;
-    display: flex;
-    gap: 1rem; /* Adjust spacing between buttons */
-    justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 1rem;
 }
 
 .project-button {
-    padding: 0.8rem 1.5rem;
-    background-color: #3d4f63f1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease-in-out;
+  padding: 0.8rem 1.5rem;
+  background-color: #3d4f63f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .project-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .project-button:active {
-    background-color: #004080;
+  background-color: #004080;
 }
 
 /* Popup Overlay */
 .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 /* Popup Content Box */
 .popup-content {
-    background: #121726;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    max-height: 500px;
-    color: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow-y: auto; /* Adds scrolling if content exceeds max height */
-    line-height: 2; /* Adds spacing between lines */
+  background: #121726;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: left;
 }
 
+/* Close Button */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    color: white;
-    cursor: pointer;
-    background: none;
-    border: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: rgb(255, 3, 3);
+  cursor: pointer;
 }
 
-/* Image Box for Projects */
-.projects-images {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Adds space between images and cards */
+/* Modal Details */
+.modal-details {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #a0a0a0;
 }
 
-.project-image-box {
-    width: 100%; /* Ensures it matches the card width */
-    max-width: 470px; /* Match the width of the cards */
-    height: 500px; /* Fixed height for consistency */
-    display: flex;
-    justify-content: center; /* Centers the images inside */
-    border: 2px solid #ccc; /* Same border as the cards */
-    border-radius: 8px;
+/* Popup Content Box for Project Details */
+.popup-content-details {
+  position: relative;
+  background: #121726;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-/* Ensures the image fills the box */
-.project-image {
-    width: 470px;
-    height: 500px;
+/* Project Title in Popup */
+.popup-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Project Description in Popup */
+.popup-description {
+  color: #a0a0a0;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Project Container */
+  .projects-container {
+    padding: 20px;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .projects-description {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 20px auto;
+  }
+
+  /* Image Box */
+  .project-image-box {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .project-image {
     object-fit: cover;
-    border-radius: 8px;
-   
-}
-.project-image-box:first-child {
-    margin-left: 160px;
-}
-.project-image-box:last-child {
-    margin-right: 160px;
-}
-/* Media Queries for Responsiveness */
+    width: 100%;
+    height: 100%;
+  }
 
-/* For devices smaller than 600px (mobile phones) */
-/* Responsive Design for Projects Section */
+  /* Project Card */
+  .project-card {
+    width: 100%;
+    padding: 20px;
+  }
 
-/* For tablets and small screens */
-@media (max-width: 1024px) {
-    .projects-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-  
-    .projects-images {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .project-image-box {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-    }
-  
-    .project-image {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-  
-    .project-card {
-      padding: 30px;
-      height: auto; /* Adjusts card height */
-    }
-  
-    .project-buttons {
-      flex-direction: column;
-    }
-  
-    .project-button {
-      margin-bottom: 10px;
-      width: 100%; /* Makes buttons full width */
-    }
-  
-    .popup-content {
-      width: 90%;
-      max-width: 500px;
-    }
+  .project-title {
+    font-size: 1.3rem;
   }
-  
-  /* For mobile screens */
-  @media (max-width: 768px) {
-    .projects-container {
-      padding: 20px;
-    }
-  
-    .projects-title {
-      font-size: 2rem;
-    }
-  
-    .projects-description {
-      font-size: 1rem;
-      max-width: 100%;
-    }
-  
-    .projects-grid {
-      grid-template-columns: 1fr;
-      gap: 15px;
-    }
-  
-    .project-card {
-      padding: 20px;
-      height: auto;
-    }
-  
-    .project-image-box {
-      max-width: 100%;
-      height: auto;
-      margin: 0;
-    }
-  
-    .project-image {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  
-    .project-buttons {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .project-button {
-      width: 100%;
-    }
-  
-    .popup-content {
-      width: 90%;
-      max-width: 400px;
-    }
-  
-    .close-btn {
-      top: 5px;
-      right: 10px;
-      font-size: 18px;
-    }
+
+  .project-text {
+    font-size: 0.9rem;
   }
-  
-  /* For very small screens (e.g., phones in portrait mode) */
-  @media (max-width: 480px) {
-    .projects-title {
-      font-size: 1.8rem;
-    }
-  
-    .projects-description {
-      font-size: 0.9rem;
-    }
-  
-    .project-title {
-      font-size: 1.2rem;
-    }
-  
-    .project-text {
-      font-size: 0.9rem;
-    }
-  
-    .popup-content {
-      width: 95%;
-      max-width: 350px;
-    }
-  
-    .project-image {
-      width: 100%;
-      height: 300px;
-    }
-  
-    .project-buttons {
-      flex-direction: column;
-      gap: 8px;
-    }
-  
-    .project-button {
-      width: 100%;
-      padding: 10px 0;
-    }
+
+  .project-buttons {
+    flex-direction: row;
+    margin-top: 15px;
+    max-width: 130px;
+justify-content: flex-start;   
+margin-left: 0%;
+padding-left: 0%; 
   }
-  
+  .project-button {
+    padding: 0.4rem 1rem; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+  /* Popup Content */
+  .popup-content {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  /* Modal Details */
+  .modal-details {
+    font-size: 0.5rem;
+  }
+}
