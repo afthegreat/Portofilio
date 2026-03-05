@@ -4,12 +4,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-header);
+  box-shadow: 0 4px 6px var(--shadow-light);
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
+  box-sizing: border-box;
+  /* Prevent overflow */
 }
 
 .logo-container {
@@ -20,33 +22,63 @@
 .logo {
   height: 40px;
   width: 70px;
-  margin-left: 6rem;
+  margin-left: 2rem;
 }
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
-  margin-right: 10rem;
+  margin-right: 2rem;
 }
 
 .nav-button {
   padding: 0.5rem 1rem;
-  background-color: #000;
-  color: white;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   font-weight: 500;
+  border: 1px solid var(--card-border);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 5px rgb(235, 18, 18);
-  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 2px 5px var(--shadow-light);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-button:hover {
-  background-color: #e5e7eb9d;
-  transform: scale(1.05);
+  background-color: var(--accent-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-hover);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary);
+  color: var(--accent-color);
+}
+
+.mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Hamburger Menu Styles */
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
 }
@@ -54,7 +86,7 @@
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--text-primary);
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -62,50 +94,54 @@
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
   .logo {
-    margin-left: 1.5rem;
+    margin-left: 0;
   }
 
   .nav-links {
-
-      position: fixed;
-      top: 0;
-      right: -100%; /* Hidden initially */
-      background-color: rgb(0, 0, 0);
-      width: auto; /* Adjust width to content */
-      height: auto; /* Fit only the necessary space */
-      display: flex;
-      flex-direction: column;
-      padding: 1rem; /* Add padding for better spacing */
-      box-shadow: -2px 0 5px rgba(255, 255, 255, 0.1);
-      transition: right 0.5s ease;
+    position: fixed;
+    top: 70px;
+    /* Below header */
+    right: -100%;
+    /* Hidden initially */
+    background-color: var(--bg-header);
+    width: 200px;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 2rem 1rem;
+    box-shadow: -4px 0 10px var(--shadow-light);
+    transition: right 0.3s ease-in-out;
+    margin-right: 0;
   }
 
   .nav-links.active {
     right: 0;
   }
 
-  .nav-button {
-    width: auto; /* Fit content size */
-    white-space: nowrap; /* Prevent text from breaking */
-    margin-bottom: 0rem;
+  .nav-links .theme-toggle {
+    display: none;
+    /* Hide toggle from main nav on mobile, put it next to hamburger */
   }
 
-  .hamburger {
+  .nav-button {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-controls {
     display: flex;
-    margin-right: 2.5rem;
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-7px, 7.5px);
+    transform: rotate(-45deg) translate(-7px, 7px);
   }
 
   .hamburger.active .bar:nth-child(2) {
-    transform: rotate(45deg) ;
-
+    opacity: 0;
   }
 
   .hamburger.active .bar:nth-child(3) {
-    opacity: 0;
-
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }

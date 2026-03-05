@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Header.css";
 import logo from "./Assets/logo.png";
+import { ThemeContext } from "../ThemeContext";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleNavClick = (sectionId) => {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsMenuOpen(false); // Close menu after selection
   };
 
@@ -25,11 +31,19 @@ export default function Header() {
         <button className="nav-button" onClick={() => handleNavClick('Projects')}>Projects</button>
         <button className="nav-button" onClick={() => handleNavClick('Services')}>Services</button>
         <button className="nav-button" onClick={() => handleNavClick('Contact')}>Contact me</button>
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+          {theme === 'light' ? <FaMoon /> : <FaSun />}
+        </button>
       </nav>
-      <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+      <div className="mobile-controls">
+        <button className="theme-toggle mobile-theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+          {theme === 'light' ? <FaMoon /> : <FaSun />}
+        </button>
+        <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
       </div>
     </header>
   );

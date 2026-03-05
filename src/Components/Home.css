@@ -1,166 +1,192 @@
 /* Home.css */
 .container {
-    display: flex;
-    min-height: 70vh; /* Use min-height for flexibility */
-    flex-direction: row; /* Default to row for larger screens */
+  display: flex;
+  min-height: 100vh;
+  /* Changed from 70vh to ensure it fills the screen */
+  flex-direction: row;
+  background-color: var(--bg-primary);
+  padding-top: 80px;
+  /* Offset for fixed header */
+}
+
+.left-section {
+  width: 50%;
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.text-content {
+  max-width: 500px;
+  text-align: left;
+}
+
+.left-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.left-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.left-section p {
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  /* Replaced margin with gap for better flex control */
+  align-items: center;
+}
+
+.buttons button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--shadow-hover);
+}
+
+.buttons a:first-child button {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.buttons a:first-child button:hover {
+  background-color: var(--accent-hover);
+}
+
+.buttons a:nth-child(2) button {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 1px solid var(--card-border);
+}
+
+.buttons a:nth-child(2) button:hover {
+  background-color: var(--card-border);
+}
+
+
+.right-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+.image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+
+/* Mobile Layout (Tablets and phones below 992px) */
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column-reverse;
+    /* Put image on top for smaller screens if desired, or keep column */
+    min-height: auto;
   }
-  
-  .left-section {
-    width: 50%;
-    background-color: #f8f9fa; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem; 
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 3rem 1.5rem;
   }
-  
+
+  .right-section {
+    padding-top: 4rem;
+    /* Additional padding if needed */
+  }
+
   .text-content {
-    max-width: 400px; /* Adjust max-width for readability */
-    text-align: left; /* Align text to the left */
+    max-width: 100%;
+    text-align: center;
   }
-  
+
   .left-section h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
   }
-  
+
   .left-section h2 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #6c757d; /* Example color */
   }
-  
-  .left-section p {
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-  
+
   .buttons {
-    display: flex;
-  }
-  
-  .buttons button {
-    padding: 0.8rem 1.5rem;
-    margin-right: 5rem; /* Space between buttons */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buttons button:first-child { /* Style the first button differently if needed */
-      background-color: #007bff; /* Example primary color */
-      color: white;
-  }
-  .buttons button:first-child:hover{
-      background-color: #0056b3;
-  }
-  .buttons button:nth-child(2) {
-      background-color: #6c757d; /* Example secondary color */
-      color: white;
-  }
-  .buttons button:nth-child(2):hover{
-      background-color: #080a0c;
-  }
-  
-  
-  .right-section {
-    width: 50%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Prevent image overflow */
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Responsive Design */
-  /* Mobile-responsive styles for smaller screens */
-
-/* Mobile Layout */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stack sections vertically */
-    min-height: auto; /* Allow content height to adjust */
-  }
-
-  .left-section {
-    width: 100%; /* Full width on mobile */
-    padding: 1rem; /* Adjust padding */
-    text-align: center; /* Center text */
-  }
-
-  .text-content {
-    max-width: 90%; /* Allow more space on smaller screens */
-    margin: 0 auto; /* Center align text content */
-  }
-
-  .left-section h1 {
-    font-size: 2rem; /* Adjust font size */
-    margin-bottom: 0.8rem; /* Adjust margin */
-  }
-
-  .left-section h2 {
-    font-size: 1.3rem; /* Adjust font size */
-    margin-bottom: 1rem;
-  }
-
-  .left-section p {
-    margin-bottom: 1.5rem; /* Adjust margin */
-    line-height: 1.5; /* Adjust line height */
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center;
-  }
-
-  .buttons button {
-    margin: 0.5rem 0; /* Adjust margin for stacked buttons */
-    padding: 1rem 2rem; /* Adjust button padding */
-    width: 80%; /* Button width adjustment */
-  }
-
-  .right-section {
-    width: 100%; /* Full width for mobile */
-    padding-top: 2rem; /* Adjust top padding */
-  }
-
-  .image {
-    width: 100%; /* Make image responsive */
-    height: auto;
+    flex-wrap: wrap;
+    /* Allow wrapping if buttons get too wide */
   }
 }
 
 /* Very Small Screens (Portrait Mobile Devices) */
 @media screen and (max-width: 480px) {
   .left-section h1 {
-    font-size: 1.8rem; /* Further reduce font size */
+    font-size: 2rem;
   }
 
   .left-section h2 {
-    font-size: 1.1rem; /* Further reduce font size */
+    font-size: 1.2rem;
   }
 
   .left-section p {
-    font-size: 0.9rem; /* Reduce font size */
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .buttons a {
+    width: 100%;
   }
 
   .buttons button {
-    padding: 0.8rem 1.5rem; /* Adjust padding */
-    font-size: 0.9rem; /* Reduce button font size */
-  }
-
-  .buttons button:first-child {
-    margin-right: 0; /* Remove margin for single button on small screens */
+    width: 100%;
+    padding: 1rem;
   }
 
   .right-section {
-    padding-top: 1rem; /* Reduce top padding */
+    padding-top: 2rem;
+  }
+
+  .image {
+    max-width: 95%;
   }
 }

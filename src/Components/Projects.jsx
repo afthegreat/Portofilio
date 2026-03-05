@@ -5,6 +5,82 @@ import onlin from "./Assets/online.png";
 import broke from "./Assets/broker.png";
 
 const projects = [
+    {
+    title: "Inventory Management System",
+    description: "Automated Inventory contoller.",
+    details: `
+      <h2>Description</h2>
+      <p>A web-based system for managing incoming and outgoing items with automated reporting mechanism.</p>
+      <h2>Technologies Used</h2>
+      <div class="technologies">
+        <div class="tech-category"><span>Front-end:</span>
+          <ul>
+            <li>Language: JavaScript</li>
+            <li>Library: React</li>
+          </ul>
+        </div>
+        <div class="tech-category"><span>Backend:</span>
+          <ul>
+            <li>Language: JavaScript</li>
+            <li>Runtime Environment: Node.js</li>
+          </ul>
+        </div>
+        <div class="tech-category"><span>Database:</span>
+          <ul>
+            <li>Postgres</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Features:</h3>
+      <ul>
+        <li>Automated issueing Items mechanism</li>
+        <li>Automated check up and alert for min at stock and reorder levels</li>
+        <li>Automated Reports with category</li>
+        <li>Secure authentication and role-based access</li>
+        <li>Responsive UI for seamless user experience</li>
+      </ul>
+    `,
+    githubLink: "https://github.com/afthegreat/",
+    additionalText: "Details",
+    image: broke,
+  },
+    {
+    title: "Online Election System",
+    description: "Building a secure and fast election system.",
+    details: `
+      <h2>Description</h2>
+      <p>A web-based system that allows students to choose their student unions in an easy and secured way.</p>
+      <h2>Technologies Used</h2>
+      <div class="technologies">
+        <div class="tech-category"><span>Front-end:</span>
+          <ul>
+            <li>Language: JavaScript</li>
+            <li>Library: React</li>
+          </ul>
+        </div>
+        <div class="tech-category"><span>Backend:</span>
+          <ul>
+            <li>Language: Java</li>
+            <li>Framework: Springboot</li>
+          </ul>
+        </div>
+        <div class="tech-category"><span>Database:</span>
+          <ul>
+            <li>Postgres</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Features:</h3>
+      <ul>
+        <li>Secure online voting system</li>
+        <li>Role-based access for students, candidates, and administrators</li>
+        <li>Automated vote counting and results display</li>
+      </ul>
+    `,
+    githubLink: "https://github.com/afthegreat/online-election",
+    additionalText: "Details",
+    image: onlin,
+  },
   {
     title: "Broker website system",
     description: "User-friendly buyer and seller agent system.",
@@ -42,43 +118,7 @@ const projects = [
     additionalText: "Details",
     image: broke,
   },
-  {
-    title: "Online Election System",
-    description: "Building a secure and fast election system.",
-    details: `
-      <h2>Description</h2>
-      <p>A web-based system that allows students to choose their student unions in an easy and secured way.</p>
-      <h2>Technologies Used</h2>
-      <div class="technologies">
-        <div class="tech-category"><span>Front-end:</span>
-          <ul>
-            <li>Language: JavaScript</li>
-            <li>Library: React</li>
-          </ul>
-        </div>
-        <div class="tech-category"><span>Backend:</span>
-          <ul>
-            <li>Language: Java</li>
-            <li>Framework: Springboot</li>
-          </ul>
-        </div>
-        <div class="tech-category"><span>Database:</span>
-          <ul>
-            <li>Postgres</li>
-          </ul>
-        </div>
-      </div>
-      <h3>Features:</h3>
-      <ul>
-        <li>Secure online voting system</li>
-        <li>Role-based access for students, candidates, and administrators</li>
-        <li>Automated vote counting and results display</li>
-      </ul>
-    `,
-    githubLink: "https://github.com/afthegreat/online-election",
-    additionalText: "Details",
-    image: onlin,
-  },
+
 ];
 
 const imageVariants = {
